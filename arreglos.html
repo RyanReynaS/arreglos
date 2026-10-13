@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Codificación de caracteres y ajuste a pantallas de móvil -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos de Edades</title>
+    <!-- Estilos de la página -->
+    <link rel="stylesheet" href="arreglos.css">
+</head>
+
+<body>
+
+    <!-- Contenedor general de toda la página -->
+    <main class="contenedor">
+        <h1>Gestión de Arreglos de Edades</h1>
+
+        <!-- Input para escribir una edad y botón que la agrega a la izquierda -->
+        <section class="formulario">
+            <!-- id="nuevaEdad" lo usa agregarEdad() en el JS para leer el valor -->
+            <input type="number" id="nuevaEdad" placeholder="Ingrese una edad">
+            <!-- Llama a agregarEdad() al hacer clic -->
+            <button onclick="agregarEdad()">Agregar</button>
+        </section>
+
+        <!-- Las dos tablas, una al lado de la otra -->
+        <section class="tablas">
+            <!-- Tabla izquierda: Valor | Eliminar | Mover -->
+            <div class="tabla-contenedor">
+                <h2>Arreglo Izquierdo</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Valor</th>
+                            <th>Eliminar</th>
+                            <th>Mover</th>
+                        </tr>
+                    </thead>
+                    <!-- El JS llena este tbody con las filas de edadesIzquierda -->
+                    <tbody id="tablaIzquierda"></tbody>
+                </table>
+            </div>
+
+            <!-- Tabla derecha: Mover | Valor | Eliminar -->
+            <div class="tabla-contenedor">
+                <h2>Arreglo Derecho</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mover</th>
+                            <th>Valor</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                    <!-- El JS llena este tbody con las filas de edadesDerecha -->
+                    <tbody id="tablaDerecha"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lógica de la página (agregar, eliminar y mover edades) -->
+    <script src="arreglos1.js"></script>
+</body>
+
+</html>

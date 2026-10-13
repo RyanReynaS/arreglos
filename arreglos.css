@@ -1,0 +1,153 @@
+/* Reset: quita márgenes y rellenos por defecto y usa Arial en todo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo gris claro de la página y color del texto */
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+/* Tarjeta blanca centrada con sombra y esquinas redondeadas */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Título centrado con espacio abajo */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Input y botón Agregar en una fila centrada */
+.formulario {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Estilo de los inputs: ancho fijo de 220px y borde redondeado */
+input {
+    padding: 12px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Estilo base de todos los botones (azul) */
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Botón azul más oscuro al pasar el mouse */
+button:hover {
+    background: #1e40af;
+}
+
+/* Botón rojo para Eliminar */
+.btn-eliminar {
+    background: #dc2626;
+}
+
+/* Rojo más oscuro al pasar el mouse */
+.btn-eliminar:hover {
+    background: #991b1b;
+}
+
+/* Botón verde para Mover (➜ y ⬅) */
+.btn-mover {
+    background: #16a34a;
+}
+
+/* Verde más oscuro al pasar el mouse */
+.btn-mover:hover {
+    background: #166534;
+}
+
+/* Las dos tablas lado a lado con espacio entre ellas */
+.tablas {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+/* Cada tabla ocupa la mitad del ancho; si no cabe, aparece scroll horizontal */
+.tabla-contenedor {
+    width: 50%;
+    overflow-x: auto;
+}
+
+/* Títulos "Arreglo Izquierdo" y "Arreglo Derecho" centrados */
+h2 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+/* Tabla a todo el ancho del contenedor, sin separación entre bordes */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+/* Encabezados oscuros con texto blanco */
+th {
+    background: #111827;
+    color: white;
+    padding: 12px;
+}
+
+/* Celdas con borde gris y texto centrado */
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Filas pares con fondo gris muy claro (franjas) */
+tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* Pantallas de 768px o menos: tablas apiladas y inputs/botones a todo el ancho */
+@media (max-width: 768px) {
+    /* Tablas una debajo de la otra */
+    .tablas {
+        flex-direction: column;
+    }
+
+    /* Cada tabla ocupa todo el ancho */
+    .tabla-contenedor {
+        width: 100%;
+    }
+
+    /* Input y botón uno debajo del otro */
+    .formulario {
+        flex-direction: column;
+    }
+
+    /* Inputs y botones ocupan todo el ancho */
+    input,
+    button {
+        width: 100%;
+    }
+}
